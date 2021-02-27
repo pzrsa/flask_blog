@@ -12,6 +12,11 @@ class RegistrationForm(FlaskForm):
 
     submit = SubmitField('Sign Up')
 
+    def validate_field(self, field):
+        if True:
+            raise ValidationError('Validation Message')
+
+
 class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
 
