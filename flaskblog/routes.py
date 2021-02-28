@@ -10,13 +10,13 @@ posts = [
     {
         "author": "Parsa Mesgarha",
         "title": "Blog Post 2",
-        "content": "First Post Content",
+        "content": "Second Post Content",
         "date_posted": "Feb 25 2021"
     },
     {
         "author": "John Appleseed",
         "title": "Blog Post 1",
-        "content": "Second Post Content",
+        "content": "First Post Content",
         "date_posted": "Feb 26 2021"
     }
 ]
