@@ -9,25 +9,9 @@ from flask_login import login_user, current_user, logout_user, login_required
 
 
 
-posts = [
-    {
-        "author": "Parsa Mesgarha",
-        "title": "Blog Post 2",
-        "content": "Second Post Content",
-        "date_posted": "Feb 25 2021"
-    },
-    {
-        "author": "John Appleseed",
-        "title": "Blog Post 1",
-        "content": "First Post Content",
-        "date_posted": "Feb 26 2021"
-    }
-]
-
-
-
 @app.route('/')
 def home():
+    posts = Post.query.all()
     return render_template('home.html', posts=posts)
 
 @app.route('/about')
@@ -115,3 +99,9 @@ def new_post():
         flash('Your post has been submitted!', 'success')
         return redirect(url_for('home'))
     return render_template('create_post.html', title="New Post", form=form)
+
+
+@app.route('/post/<int:post_id>')
+def post(post_id):
+    post = Post.query.get_or_404(post_id)
+    return render_template('post.html', title=post.title post=post)
