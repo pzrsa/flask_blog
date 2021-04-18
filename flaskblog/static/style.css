@@ -8,10 +8,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #444444;
 }
 
-.bg-dark {
-    background-color: #333;
-}
-
 .site-header .navbar-nav .nav-link {
     color: #cbd5db;
 }
@@ -37,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a.article-title:hover {
-    color: #428bca;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -58,7 +54,7 @@ a.article-title:hover {
 }
 
 .article-metadata a:hover {
-    color: #333;
+    color: #808080;
     text-decoration: none;
 }
 
