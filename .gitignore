@@ -4,3 +4,4 @@ __pycache__
 .DS_Store
 profile_pics
 __init__.pyc
+.vscode
