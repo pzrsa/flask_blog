@@ -1,11 +1,11 @@
+
 import os
-from flaskblog import routes
+
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
-
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'f341fe3e9400ea4d02d88ec4da4539f3'
@@ -22,3 +22,5 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = os.environ.get('FLASK_EMAIL_USER')
 app.config['MAIL_PASSWORD'] = os.environ.get('FLASK_EMAIL_PASS')
 mail = Mail(app)
+
+from flaskblog import routes
