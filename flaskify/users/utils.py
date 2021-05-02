@@ -3,7 +3,7 @@ import secrets
 
 from flask import current_app, url_for
 from flask_mail import Message
-from flaskblog import mail
+from flaskify import mail
 from PIL import Image
 
 
